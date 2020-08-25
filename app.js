@@ -4,16 +4,12 @@ var p=document.querySelector(".lead");
 var trp=document.querySelector(".trivia");
 var year=document.querySelector(".year");
 var number=document.querySelector(".number");
-
 trp.addEventListener("click",fetchTrivia);
 year.addEventListener("click",fetchYear);
 number.addEventListener("click",fetchNumber);
-
-
  function fetchTrivia(){
 	input.addEventListener("input",fetchTrivia);
 	var input_value=input.value;
-
 	try{
        fetch("http://numbersapi.com/"+input_value+"/trivia")
   .then(response=>response.text())
